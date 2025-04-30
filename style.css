@@ -1,0 +1,195 @@
+/* style.css - Thème "Saveurs Partagées" */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #FDF6EC;
+    color: #2B6B6C;
+  }
+  
+  header {
+    background-color: #FDF6EC;
+    border-bottom: 1px solid #E5E5E5;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #2B6B6C;
+    font-weight: bold;
+  }
+  
+  .btn-login {
+    background-color: #F4A261;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .main-content {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 240px;
+    padding: 1rem;
+    background-color: #FDF6EC;
+  }
+  
+  .sidebar h3 {
+    margin-top: 1.5rem;
+    color: #2B6B6C;
+  }
+  
+  .sidebar label {
+    display: block;
+    margin: 0.4rem 0;
+    color: #2B6B6C;
+  }
+  
+  main {
+    flex-grow: 1;
+    padding: 2rem;
+  }
+  
+  .recettes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .recette-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .recette-card a {
+    text-decoration: none;
+    color: #2B6B6C;
+    font-weight: bold;
+  }
+  
+  .pagination {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .pagination a {
+    margin: 0 5px;
+    padding: 6px 12px;
+    border: 1px solid #E5E5E5;
+    text-decoration: none;
+    color: #2B6B6C;
+    border-radius: 4px;
+  }
+  
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  article {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+  
+  .newsletter-footer {
+    background-color: #FDF6EC;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #E5E5E5;
+  }
+  
+  .newsletter-footer form {
+    margin-top: 1rem;
+  }
+  
+  .newsletter-footer input[type="email"] {
+    padding: 0.5rem;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .newsletter-footer button {
+    padding: 0.5rem 1rem;
+    background-color: #F4A261;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .minuteur {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  .minuteur h2 {
+    color: #2B6B6C;
+    margin-bottom: 1rem;
+  }
+  
+  .minuteur button {
+    background-color: #F4A261;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .minuteur button:hover {
+    background-color: #e68c3a;
+  }
+  
+  .minuteur #time {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4AA3A2;
+  }
+  
+  
+  footer p {
+    text-align: center;
+    margin: 1rem 0 0;
+    color: #2B6B6C;
+  }
