@@ -1,0 +1,72 @@
+
+<!-- recette.html - Page d'une recette individuelle -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détail de la Recette</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function startTimer(duration) {
+      let timer = duration, minutes, seconds;
+      const display = document.getElementById('time');
+      const interval = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) {
+          clearInterval(interval);
+          alert("Temps écoulé !");
+        }
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><img src="logo.png" alt="Logo"></div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#">Recettes</a></li>
+        <li><a href="#">Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="recette-detail">
+    <h1>Nom de la Recette</h1>
+    <p>Description complète de la recette, étapes, durée, etc.</p>
+
+    <section class="ingredients">
+      <h2>Ingrédients</h2>
+      <form>
+        <label><input type="checkbox"> 2 œufs</label><br>
+        <label><input type="checkbox"> 200g de farine</label><br>
+        <label><input type="checkbox"> 100g de sucre</label><br>
+        <!-- autres ingrédients -->
+      </form>
+    </section>
+
+    <section class="minuteur">
+      <h2>Minuteur</h2>
+      <button onclick="startTimer(300)">Lancer 5 minutes</button>
+      <div id="time">05:00</div>
+    </section>
+  </main>
+
+  <div class="newsletter-footer">
+    <h3>Inscrivez-vous à notre newsletter</h3>
+    <p>Recevez chaque semaine de nouvelles recettes et conseils nutrition !</p>
+    <form action="#" method="post">
+      <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+      <button type="submit">S'inscrire</button>
+    </form>
+  </div>
+  <p>&copy; 2025 Forum de Recettes</p>
+</footer>
+</body>
+</html>

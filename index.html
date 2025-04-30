@@ -1,0 +1,88 @@
+<!-- index.html - Page d'accueil -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum de Recettes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Logo du site">
+      </div>
+      <ul class="menu">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Recettes</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Guide Nutrition</a></li>
+      </ul>
+      <a href="#" class="btn-login">Connexion / Inscription</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <aside class="sidebar">
+      <h3>Spécialité</h3>
+      <label><input type="checkbox"> Marocaine</label>
+      <label><input type="checkbox"> Italienne</label>
+      <label><input type="checkbox"> Espagnole</label>
+      <h3>Spécification</h3>
+      <label><input type="checkbox"> Sans gluten</label>
+      <label><input type="checkbox"> Bio</label>
+      <label><input type="checkbox"> Vegan</label>
+      <h3>Thématique</h3>
+      <label><input type="checkbox"> Petit Déjeuner</label>
+      <label><input type="checkbox"> Déjeuner</label>
+      <label><input type="checkbox"> Fêtes</label>
+    </aside>
+
+    <main>
+      <section class="recettes-aleatoires">
+        <h2>Recettes à découvrir</h2>
+        <div class="recettes-grid">
+          <!-- 9 recettes aléatoires ici -->
+          <div class="recette-card"><a href="recette.html">Recette 1</a></div>
+          <div class="recette-card"><a href="recette.html">Recette 2</a></div>
+          <div class="recette-card"><a href="recette.html">Recette 3</a></div>
+          <div class="recette-card"><a href="recette.html">Recette 4</a></div>
+          <div class="recette-card"><a href="recette.html">Recette 5</a></div>
+          <div class="recette-card"><a href="recette.html">Recette 6</a></div>
+          <div class="recette-card"><a href="recette.html">Recette 7</a></div>
+          <div class="recette-card"><a href="recette.html">Recette 8</a></div>
+          <div class="recette-card"><a href="recette.html">Recette 9</a></div>
+        </div>
+        <div class="pagination">
+          <a href="#">«</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">»</a>
+        </div>
+      </section>
+
+      <section class="articles">
+        <h2>Articles & Conseils</h2>
+        <div class="articles-grid">
+          <article><h3>Cuisson parfaite</h3><p>Conseils pour une cuisson optimale.</p></article>
+          <article><h3>Nettoyer les aliments</h3><p>Bien préparer ses ingrédients.</p></article>
+          <article><h3>Aliments à éviter</h3><p>Les pièges à éviter dans votre alimentation.</p></article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="newsletter-footer">
+    <h3>Inscrivez-vous à notre newsletter</h3>
+    <p>Recevez chaque semaine de nouvelles recettes et conseils nutrition !</p>
+    <form action="#" method="post">
+      <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+      <button type="submit">S'inscrire</button>
+    </form>
+  </div>
+  <p>&copy; 2025 Forum de Recettes</p>
+</footer>
+</body>
+</html>
