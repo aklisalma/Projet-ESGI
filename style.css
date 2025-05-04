@@ -1,5 +1,3 @@
-/* style.css - Thème "Saveurs Partagées" */
-
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -261,4 +259,78 @@ body {
 
 .auth button:hover {
   background-color: #e68c3a;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav {
+    flex-wrap: wrap; /* Permet de passer à la ligne si besoin */
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .logo img {
+    height: 32px; /* Réduit le logo */
+  }
+
+  .menu {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .menu li a {
+    font-size: 0.85rem; /* Réduction taille texte menu */
+  }
+
+  .btn-login {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .main-content {
+    flex-direction: column; /* Pour que sidebar passe au-dessus si nécessaire */
+  }
+
+  .recettes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Moins large */
+    gap: 1rem;
+  }
+
+  .articles-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .recette-card img,
+  .articles-grid article img {
+    height: 150px;
+  }
+
+  .auth {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .auth section {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .newsletter-footer input[type="email"] {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .newsletter-footer button {
+    width: 100%;
+  }
 }
