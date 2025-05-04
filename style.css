@@ -71,7 +71,7 @@ body {
     flex-grow: 1;
     padding: 2rem;
   }
-  
+
   .recette-card img,
 .articles-grid article img {
   width: 100%;
@@ -203,9 +203,7 @@ body {
     margin: 1rem 0 0;
     color: #2B6B6C;
   }
-  /* À ajouter dans style.css */
 
-/* Articles */
 .page-articles {
   padding: 2rem;
 }
@@ -216,7 +214,6 @@ body {
   color: #2B6B6C;
 }
 
-/* Connexion / Inscription */
 .auth {
   display: flex;
   flex-wrap: wrap;
