@@ -267,13 +267,13 @@ body {
   }
 
   nav {
-    flex-wrap: wrap; /* Permet de passer à la ligne si besoin */
+    flex-wrap: wrap;
     padding: 1rem;
     gap: 1rem;
   }
 
   .logo img {
-    height: 32px; /* Réduit le logo */
+    height: 32px;
   }
 
   .menu {
@@ -283,9 +283,8 @@ body {
   }
 
   .menu li a {
-    font-size: 0.85rem; /* Réduction taille texte menu */
+    font-size: 0.85rem;
   }
-
   .btn-login {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
@@ -297,11 +296,10 @@ body {
   }
 
   .main-content {
-    flex-direction: column; /* Pour que sidebar passe au-dessus si nécessaire */
+    flex-direction: column;
   }
-
   .recettes-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Moins large */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
     gap: 1rem;
   }
 
