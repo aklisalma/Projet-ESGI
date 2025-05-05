@@ -1,6 +1,6 @@
 // Exemple de données statiques (à remplacer plus tard par une base réelle)
 const recettes = [
-    { titre: "Tajine Marocain", lien: "recette.html" },
+    { titre: "Courscous", lien: "recette.html" },
     { titre: "Spaghetti Carbonara", lien: "recette.html" },
     { titre: "Paëlla Espagnole", lien: "recette.html" },
     { titre: "Curry Indien", lien: "recette.html" },
