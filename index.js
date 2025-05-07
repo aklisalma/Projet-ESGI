@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
     const recettes = document.querySelectorAll(".recette-card");
     recettes.forEach((r, i) => {
       r.style.opacity = "0";
@@ -9,4 +9,4 @@ document.addEventListener("DOMContentLoaded", () => {
         r.style.transform = "translateY(0)";
       }, i * 100);
     });
-  });
+  });*/

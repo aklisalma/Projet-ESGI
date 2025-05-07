@@ -1,5 +1,4 @@
-// Exemple de données statiques (à remplacer plus tard par une base réelle)
-const recettes = [
+/*const recettes = [
     { titre: "Tajine Marocain", lien: "recette.html" },
     { titre: "Spaghetti Carbonara", lien: "recette.html" },
     { titre: "Paëlla Espagnole", lien: "recette.html" },
@@ -81,4 +80,4 @@ const recettes = [
   document.addEventListener("DOMContentLoaded", () => {
     afficherRecettes(pageActuelle);
   });
-  
+  */
