@@ -1,3 +1,0 @@
-<?php
-readfile("Recettes.html");
-?>
