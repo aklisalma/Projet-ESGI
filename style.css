@@ -18,7 +18,8 @@ body {
   }
   
   .logo img {
-    height: 40px;
+    height: auto;
+    max-width: 100px;
   }
   
   .menu {
