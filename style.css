@@ -95,13 +95,16 @@ body {
     padding: 1rem;
     text-align: center;
   }
-  
+  .voir-plus h3{
+    display:flex;
+  }
   .recette-card a {
     text-decoration: none;
     color: #2B6B6C;
     font-weight: bold;
   }
-  
+ 
+ 
   .pagination {
     text-align: center;
     margin: 2rem 0;
