@@ -43,7 +43,27 @@ body {
     border-radius: 5px;
     font-weight: bold;
   }
+  .main-content {
+    display: flex;
+  }
   
+  .sidebar {
+    width: 240px;
+    padding: 1rem;
+    background-color: #FDF6EC;
+  }
+  
+  .sidebar h3 {
+    margin-top: 1.5rem;
+    color: #2B6B6C;
+  }
+  
+  .sidebar label {
+    display: block;
+    margin: 0.4rem 0;
+    color: #2B6B6C;
+  }
+
   .main-content {
     display: flex;
   }
