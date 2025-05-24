@@ -16,6 +16,28 @@ body {
     justify-content: space-between;
     padding: 1rem 2rem;
   }
+  .recettes-but {
+    padding: 0.25rem 0.75rem; 
+    background-color: white;
+    border-radius: 9999px;     
+    transition: 0.3s, color 0.3s; 
+  }
+  .recettes-but:hover{
+    background-color: #ea580c; 
+    color: white;
+  }
+  .voir {
+    color: #ea580c; 
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .voir:hover {
+    color: #e68c3a;
+  }
+  .plus {
+    margin-left: 0.25rem;
+  }
   
   .logo img {
     height: auto;
