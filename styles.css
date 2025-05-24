@@ -28,6 +28,7 @@
   .slide {
     position: absolute;
     width: 100%;
+    background-attachment;
     height: 100%;
     background-size: cover;
     background-position: center;
