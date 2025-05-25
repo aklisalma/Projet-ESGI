@@ -45,7 +45,7 @@ $recettesPage = array_slice($recettes, $debut, $recettesParPage);
       </div>
       <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="recettes.php">Recettes</a></li>
+        <li><a href="recettes.html">Recettes</a></li>
         <li><a href="articles.html">Articles</a></li>
         <li><a href="Accueil.html">Guide Nourriture</a></li>
       </ul>
