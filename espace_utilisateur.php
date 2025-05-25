@@ -1,31 +1,42 @@
+<?php
+session_start();
+if (!isset($_SESSION["user"])) {
+  header("Location: connexion.html");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forum de Recettes</title>
+  <title>Espace Utilisateur</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
     <nav>
       <div class="logo">
-        <a href="https://tonlien.com">
+        <a href="index.php">
           <img src="assets/LOGO.png" alt="Logo du site">
         </a>        
       </div>
       <ul class="menu">
-        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.php">Accueil</a></li>
         <li><a href="Recettes.html">Recettes</a></li>
         <li><a href="articles.html">Articles</a></li>
         <li><a href="Accueil.html">Guide Nourriture</a></li>
       </ul>
-      <a href="connexion.html" class="btn-login">Connexion / Inscription</a>
+      <div>
+        <a href="#" class="btn-login">Ajouter une recette</a>
+        <a href="index.html" class="btn-login" style="background-color:#ccc; margin-left: 10px;">Se déconnecter</a>
+      </div>
     </nav>
   </header>
-<div class="main-content">
+
+  <div class="main-content">
+    <div class="main-content">
       <aside class="sidebar">
         <h3>Spécialité</h3>
         <label><input type="checkbox"> Marocaine</label>
@@ -156,5 +167,4 @@
     <p>&copy; 2025 Forum de Recettes - Tous droits réservés</p>
   </footer>
 </body>
-
 </html>

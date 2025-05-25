@@ -22,21 +22,23 @@
   <main class="auth">
     <section class="connexion">
       <h2>Connexion</h2>
-      <form action="#" method="post">
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Mot de passe" required>
-        <button type="submit">Se connecter</button>
-      </form>
+      <form action="connexion.php" method="post">
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="password" name="password" placeholder="Mot de passe" required>
+  <button type="submit">Se connecter</button>
+</form>
+
     </section>
 
     <section class="inscription">
       <h2>Inscription</h2>
-      <form action="#" method="post">
-        <input type="text" placeholder="Nom complet" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Mot de passe" required>
-        <button type="submit">S'inscrire</button>
-      </form>
+     <form action="inscription.php" method="post">
+      <input type="text" name="nom" placeholder="Nom complet" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Mot de passe" required>
+      <button type="submit">S'inscrire</button>
+</form>
+
     </section>
   </main>
 
