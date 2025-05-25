@@ -32,6 +32,22 @@ $recettes_a_afficher = array_slice($recettes, $debut, $recettes_par_page);
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+    <nav>
+      <div class="logo">
+        <a href="https://tonlien.com">
+          <img src="assets/LOGO.png" alt="Logo du site">
+        </a>        
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="Recettes.html">Recettes</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="Accueil.html">Guide Nourriture</a></li>
+      </ul>
+      <a href="connexion.html" class="btn-login">Connexion / Inscription</a>
+    </nav>
+  </header>
     <main>
         <section class="recettes-aleatoires">
             <h2>Nos délicieuses recettes </h2>

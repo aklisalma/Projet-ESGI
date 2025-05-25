@@ -5,14 +5,14 @@ $recettes = [
     ['id' => 2, 'nom' => 'Poulet Moambe', 'image' => 'assets/Poulet Moambe.png', 'desc' => 'Spécialité africaine à la sauce palmiste'],
     ['id' => 3, 'nom' => 'Bœuf Bourguignon', 'image' => 'assets/Bœuf Bourguignon.png', 'desc' => 'Classique français mijoté au vin rouge'],
     ['id' => 4, 'nom' => 'Lasagnes', 'image' => 'assets/Lasagne.png', 'desc' => 'Pâtes italiennes feuilletées à la bolognaise'],
-    ['id' => 5, 'nom' => 'Burger Gourmet', 'image' => 'assets/Burger.png', 'desc' => 'Sandwich américain revisité'],
-    ['id' => 6, 'nom' => 'Sushi Variés', 'image' => 'assets/Sushi.png', 'desc' => 'Spécialité japonaise au poisson cru'],
+    ['id' => 5, 'nom' => 'Burger ', 'image' => 'assets/Burger.png', 'desc' => 'Sandwich américain revisité'],
+    ['id' => 6, 'nom' => 'Sushi ', 'image' => 'assets/Sushi.png', 'desc' => 'Spécialité japonaise au poisson cru'],
     ['id' => 7, 'nom' => 'Mezzé Libanais', 'image' => 'assets/muzze.png', 'desc' => 'Assortiment de mezze du Moyen-Orient'],
     ['id' => 8, 'nom' => 'Paella Valenciana', 'image' => 'assets/Paella.png', 'desc' => 'Riz espagnol aux fruits de mer'],
-    ['id' => 9, 'nom' => 'Canard laqué', 'image' => 'assets/canard.png', 'desc' => 'Spécialité chinoise croustillante'],
-    ['id' => 10, 'nom' => 'Ratatouille', 'image' => 'assets/ratatouille.jpg', 'desc' => 'Légumes provençaux mijotés'],
-    ['id' => 11, 'nom' => 'Tajine d\'agneau', 'image' => 'assets/tajine.jpg', 'desc' => 'Plat marocain aux pruneaux'],
-    ['id' => 12, 'nom' => 'Pad Thaï', 'image' => 'assets/pad-thai.jpg', 'desc' => 'Nouilles sautées thaïlandaises']
+    ['id' => 9, 'nom' => 'Canard laqué', 'image' => 'assets/canards-du-lac-brome-recette-canard-laque-orange-R-1024x732.jpg', 'desc' => 'Spécialité chinoise croustillante'],
+    ['id' => 10, 'nom' => 'Ratatouille', 'image' => 'assets/healthy-vegetarian-lunch-stewed-garden-vegetables-vegetable-ratatouille.jpg', 'desc' => 'Légumes provençaux mijotés'],
+    ['id' => 11, 'nom' => 'Tajine d\'agneau', 'image' => 'assets/tajine-agneau-rapide.jpg', 'desc' => 'Plat marocain aux pruneaux'],
+    ['id' => 12, 'nom' => 'Pad Thaï', 'image' => 'assets/padthai2-min.webp', 'desc' => 'Nouilles sautées thaïlandaises']
 ];
 
 // Configuration de la pagination
