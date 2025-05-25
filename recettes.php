@@ -1,5 +1,4 @@
 <?php
-// Tableau des recettes avec images et descriptions
 $recettes = [
     ['id' => 1, 'nom' => 'Couscous Marocain', 'image' => 'assets/couscous-marocain.jpeg', 'desc' => 'Plat traditionnel nord-africain'],
     ['id' => 2, 'nom' => 'Poulet Moambe', 'image' => 'assets/Poulet Moambe.png', 'desc' => 'Spécialité africaine à la sauce palmiste'],
@@ -15,16 +14,13 @@ $recettes = [
     ['id' => 12, 'nom' => 'Pad Thaï', 'image' => 'assets/padthai2-min.webp', 'desc' => 'Nouilles sautées thaïlandaises']
 ];
 
-// Configuration de la pagination
 $recettesParPage = 6;
 $pageCourante = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;
 $totalRecettes = count($recettes);
 $totalPages = ceil($totalRecettes / $recettesParPage);
 
-// Validation de la page
 if($pageCourante > $totalPages) $pageCourante = $totalPages;
 
-// Récupération des recettes pour la page courante
 $debut = ($pageCourante - 1) * $recettesParPage;
 $recettesPage = array_slice($recettes, $debut, $recettesParPage);
 ?>

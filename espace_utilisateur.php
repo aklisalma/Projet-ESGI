@@ -34,7 +34,6 @@ if (!isset($_SESSION["user"])) {
       </div>
     </nav>
   </header>
-
   <div class="main-content">
     <div class="main-content">
       <aside class="sidebar">
