@@ -7,16 +7,41 @@
   <title>Forum de Recettes</title>
   <link rel="stylesheet" href="style.css">
   <style>
-@media screen and (max-width: 768px) {
-  .sidebar {
-    display: none !important;
-    visibility: hidden;
-    height: 0;
-    overflow: hidden;
-  }
-}
-</style>
-
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        display: none !important;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+      }
+    }
+    .pagination {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .pagination button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border: none;
+      background-color: #eee;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .pagination button.active {
+      background-color: #f38e00;
+      color: white;
+      font-weight: bold;
+    }
+    .pagination button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .recettes-but.active {
+      background-color: #f38e00;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
@@ -25,7 +50,7 @@
       <div class="logo">
         <a href="https://tonlien.com">
           <img src="assets/LOGO.png" alt="Logo du site">
-        </a>        
+        </a>
       </div>
       <ul class="menu">
         <li><a href="index.html">Accueil</a></li>
@@ -36,125 +61,80 @@
       <a href="connexion.html" class="btn-login">Connexion / Inscription</a>
     </nav>
   </header>
-<div class="main-content">
-      <aside class="sidebar">
-        <h3>Spécialité</h3>
-        <label><input type="checkbox"> Marocaine</label>
-        <label><input type="checkbox"> Italienne</label>
-        <label><input type="checkbox"> Congolaise</label>
-        <label><input type="checkbox"> Américaine</label>
-        <label><input type="checkbox"> Japonaise</label>
-        <label><input type="checkbox"> Libanaise</label>
-        <label><input type="checkbox"> Espagnole</label>
-        <label><input type="checkbox"> Française</label>
-        <label><input type="checkbox"> Chinoise</label>
-        <label><input type="checkbox"> Indienne </label>
-        <label><input type="checkbox"> Turque</label>
 
-        <h3>Spécification</h3>
-        <label><input type="checkbox"> Sans gluten</label>
-        <label><input type="checkbox"> Bio</label>
-        <label><input type="checkbox"> Vegan</label>
+  <div class="main-content">
+    <main>
+      <section class="recettes-aleatoires">
+        <h2>Nouveauté</h2>
+        <div class="recettes-button">
+          <button class="recettes-but active" data-filter="toutes">Toutes</button>
+          <button class="recettes-but" data-filter="populaires">Populaires</button>
+          <button class="recettes-but" data-filter="recentes">Récentes</button>
+        </div>
 
-        <h3>Thématique</h3>
-        <label><input type="checkbox"> Petit Déjeuner</label>
-        <label><input type="checkbox"> Déjeuner</label>
-        <label><input type="checkbox"> Fêtes</label>
-      </aside>
-  <main>
-    <section class="recettes-aleatoires">
-      <h2>Nouveauté</h2>
-      <div class="recettes-button">
-        <button class= "recettes-but">
-          Toutes
-        </button>
-        <button class="recettes-but">
-          Populaires
-        </button>
-        <button class="recettes-but">
-          Récentes
-        </button>
-      </div>
-      <div class="recettes-grid">
-        <div class="recette-card">
-  <img src="assets/couscous-marocain.jpeg" alt="Recette 1">
-  <a href="recette.php?id=1">Couscous Marocain</a>
-  <p>Plat traditionnel nord-africain</p>
-</div>
-<div class="recette-card">
-  <img src="assets/Poulet Moambe.png" alt="Recette 2">
-  <a href="recette.php?id=2">Poulet Moambe</a>
-  <p>Spécialité africaine à la sauce palmiste</p>
-</div>
-<div class="recette-card">
-  <img src="assets/Bœuf Bourguignon.png" alt="Recette 3">
-  <a href="recette.php?id=3">Bœuf Bourguignon</a>
-  <p>Classique français mijoté au vin rouge</p>
-</div>
-<div class="recette-card">
-  <img src="assets/Lasagne.png" alt="Recette 4">
-  <a href="recette.php?id=4">Lasagne</a>
-  <p>Pâtes italiennes feuilletées à la bolognaise</p>
-</div>
-<div class="recette-card">
-  <img src="assets/Burger.png" alt="Recette 5">
-  <a href="recette.php?id=5">Burger</a>
-  <p>Sandwich américain revisité</p>
-</div>
-<div class="recette-card">
-  <img src="assets/Sushi.png" alt="Recette 6">
-  <a href="recette.php?id=6">Sushi</a>
-  <p>Spécialité japonaise au poisson cru</p>
-</div>
-<div class="recette-card">
-  <img src="assets/muzze.png" alt="Recette 7">
-  <a href="recette.php?id=7">Mezzé</a>
-  <p>Assortiment de mezze du Moyen-Orient</p>
-</div>
-<div class="recette-card">
-  <img src="assets/Paella.png" alt="Recette 8">
-  <a href="recette.php?id=8">Paella</a>
-  <p>Riz espagnol aux fruits de mer</p>
-</div>
-<div class="recette-card">
-  <img src="assets/canards-du-lac-brome-recette-canard-laque-orange-R-1024x732.jpg" alt="Recette 9">
-  <a href="recette.php?id=9">Canard laqué</a>
-  <p>Spécialité chinoise croustillante</p>
-</div>
+        <div class="recettes-grid" id="recettesContainer">
+          <div class="recette-card" data-type="populaires">
+            <img src="assets/couscous-marocain.jpeg">
+            <a href="#">Couscous Marocain</a>
+            <p>Plat traditionnel nord-africain à base de semoule, de légumes et de viande.</p>
+          </div>
+          <div class="recette-card" data-type="recentes">
+            <img src="assets/Poulet Moambe.png">
+            <a href="#">Poulet Moambe</a>
+            <p>Spécialité congolaise avec sauce à la moambe et riz parfumé.</p>
+          </div>
+          <div class="recette-card" data-type="populaires">
+            <img src="assets/Bœuf Bourguignon.png">
+            <a href="#">Bœuf Bourguignon</a>
+            <p>Viande de boeuf mijotée au vin rouge avec carottes et champignons.</p>
+          </div>
+          <div class="recette-card" data-type="toutes">
+            <img src="assets/Lasagne.png">
+            <a href="#">Lasagne</a>
+            <p>Pâtes italiennes en couches avec sauce tomate, viande et fromage gratiné.</p>
+          </div>
+          <div class="recette-card" data-type="recentes">
+            <img src="assets/Burger.png">
+            <a href="#">Burger</a>
+            <p>Steak haché, salade, tomate, cheddar dans un pain moelleux.</p>
+          </div>
+          <div class="recette-card" data-type="populaires">
+            <img src="assets/Sushi.png">
+            <a href="#">Sushi</a>
+            <p>Spécialité japonaise de poisson cru et riz vinaigré roulé dans des algues.</p>
+          </div>
+          <div class="recette-card" data-type="toutes">
+            <img src="assets/muzze.png">
+            <a href="#">Mezzé</a>
+            <p>Assortiment de petits plats orientaux comme houmous et falafel.</p>
+          </div>
+          <div class="recette-card" data-type="recentes">
+            <img src="assets/Paella.png">
+            <a href="#">Paella</a>
+            <p>Riz espagnol au safran cuisiné avec fruits de mer, poulet et légumes.</p>
+          </div>
+          <div class="recette-card" data-type="populaires">
+            <img src="assets/canards-du-lac-brome-recette-canard-laque-orange-R-1024x732.jpg">
+            <a href="#">Canard laqué</a>
+            <p>Recette chinoise de canard croustillant caramélisé à la sauce soja.</p>
+          </div>
+        </div>
 
-      </div>
-      <div class="pagination">
-        <a href="#">«</a>
-        <a href="index.php">1</a>
-        <a href="index.php">2</a>
-        <a href="#">»</a>
-      </div>
-    </section>
-
-    <section class="articles">
-      <h2>Nos Articles & Conseils</h2>
-    <div class="articles-grid">
-      <article>
-        <img src="assets/Cuisson.jpg" alt="Cuisson parfaite">
-        <h3>Les secrets d'une cuisson parfaite</h3>
-        <p>Découvrez nos astuces pour maîtriser les temps de cuisson et obtenir des résultats parfaits à chaque fois.</p>
-      </article>
-      <article>
-        <img src="assets/Nettoyage.jpg" alt="Nettoyer les aliments">
-        <h3>Comment bien nettoyer vos aliments</h3>
-        <p>Apprenez les bonnes techniques pour nettoyer vos fruits, légumes et viandes avant de les cuisiner.</p>
-      </article>
-      <article>
-        <img src="assets/fastfood.jpg" alt="Aliments à éviter">
-        <h3>Les aliments à éviter dans votre alimentation</h3>
-        <p>Notre nutritionniste vous révèle les pièges à éviter pour une alimentation saine et équilibrée.</p>
-      </article>
-    </div>
-    <a href="articles.html" class="voir">Voir plus <i class="plus"></i> </a>
-    </section>
-  </main>
+        <div class="pagination" id="paginationRecettes"></div>
+      </section>
+      <section class="articles">
+        <h2>Nos Articles & Conseils</h2>
+        <div class="articles-grid" id="articlesContainer">
+          <article><img src="assets/Cuisson.jpg"><h3>Les secrets d'une cuisson parfaite</h3><p>Découvrez comment maîtriser la température et les temps de cuisson pour chaque ingrédient.</p></article>
+          <article><img src="assets/Nettoyage.jpg"><h3>Comment bien nettoyer vos aliments</h3><p>Conseils pratiques pour laver fruits, légumes et viandes de façon hygiénique et sûre.</p></article>
+          <article><img src="assets/fastfood.jpg"><h3>Les aliments à éviter dans votre alimentation</h3><p>Liste des produits ultra-transformés à limiter pour une meilleure santé.</p></article>
+        </div>
+        <div class="pagination" id="paginationArticles"></div>
+        <a href="articles.html" class="voir">Voir plus <i class="plus"></i></a>
+      </section>
+    </main>
   </div>
-</div>
+
   <footer>
     <div class="newsletter-footer">
       <h3>Inscrivez-vous à notre newsletter</h3>
@@ -166,6 +146,87 @@
     </div>
     <p>&copy; 2025 Forum de Recettes - Tous droits réservés</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".recettes-but");
+      const allCards = Array.from(document.querySelectorAll(".recette-card"));
+      const container = document.getElementById("recettesContainer");
+      const pagination = document.getElementById("paginationRecettes");
+      let currentPage = 1;
+      const itemsPerPage = 3;
+      let filteredCards = [...allCards];
+
+      function renderPage(page) {
+        container.innerHTML = "";
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        filteredCards.slice(start, end).forEach(card => container.appendChild(card));
+      }
+
+      function renderPagination() {
+        pagination.innerHTML = "";
+        const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
+
+        const prev = document.createElement("button");
+        prev.textContent = "«";
+        prev.disabled = currentPage === 1;
+        prev.onclick = () => {
+          if (currentPage > 1) {
+            currentPage--;
+            renderPage(currentPage);
+            renderPagination();
+          }
+        };
+        pagination.appendChild(prev);
+
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement("button");
+          btn.textContent = i;
+          if (i === currentPage) btn.classList.add("active");
+          btn.onclick = () => {
+            currentPage = i;
+            renderPage(currentPage);
+            renderPagination();
+          };
+          pagination.appendChild(btn);
+        }
+
+        const next = document.createElement("button");
+        next.textContent = ">»";
+        next.disabled = currentPage === totalPages;
+        next.onclick = () => {
+          if (currentPage < totalPages) {
+            currentPage++;
+            renderPage(currentPage);
+            renderPagination();
+          }
+        };
+        pagination.appendChild(next);
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          buttons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.dataset.filter;
+
+          if (filter === "toutes") {
+            filteredCards = [...allCards];
+          } else {
+            filteredCards = allCards.filter(card => card.dataset.type === filter);
+          }
+
+          currentPage = 1;
+          renderPage(currentPage);
+          renderPagination();
+        });
+      });
+
+      renderPage(currentPage);
+      renderPagination();
+    });
+  </script>
 </body>
 
 </html>
