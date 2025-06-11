@@ -308,74 +308,108 @@ body {
   background-color: #e68c3a;
 }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
+@media screen and (max-width: 1024px) {
+  .menu {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
   }
 
   nav {
-    flex-wrap: wrap;
-    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
-  }
-
-  .logo img {
-    height: 32px;
-  }
-
-  .menu {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-
-  .menu li a {
-    font-size: 0.85rem;
-  }
-  .btn-login {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .sidebar {
-    width: 100%;
-    padding: 1rem 0;
   }
 
   .main-content {
     flex-direction: column;
   }
-  .recettes-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
-    gap: 1rem;
+
+  .sidebar {
+    width: 100%;
+    padding: 1rem;
+    border-right: none;
   }
 
+  main {
+    padding: 1rem;
+  }
+
+  .recettes-grid,
   .articles-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
   }
 
   .recette-card img,
   .articles-grid article img {
-    height: 150px;
+    height: auto;
+  }
+
+  .btn-login {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .recettes-grid,
+  .articles-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 0;
+  }
+
+  .btn-login {
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .newsletter-footer input[type="email"],
+  .newsletter-footer button {
+    width: 100%;
+    margin-top: 0.5rem;
   }
 
   .auth {
-    gap: 1.5rem;
-    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .auth section {
     width: 100%;
-    max-width: 320px;
+    padding: 1rem;
   }
 
-  .newsletter-footer input[type="email"] {
-    width: 100%;
-    margin-bottom: 0.5rem;
+  .recette-card {
+    padding: 0.75rem;
   }
 
-  .newsletter-footer button {
-    width: 100%;
+  .recette-card a {
+    font-size: 1rem;
+  }
+
+  .menu li a {
+    font-size: 0.9rem;
   }
 }

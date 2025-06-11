@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $password = $_POST["password"];
   $file = "utilisateurs.txt";
 
-  //creation du fichier .txt s'il n'existe encore pas
+  //creation du fichier .txt s'il n'existe encore pas !
   if (!file_exists($file)) {
     file_put_contents($file, "");
   }

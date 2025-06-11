@@ -1,5 +1,4 @@
 <?php
-// Tableau des recettes
 $recettes = [
     ['img' => 'assets/couscous-marocain.jpeg', 'nom' => 'Couscous', 'alt' => 'Couscous marocain'],
     ['img' => 'assets/Poulet Moambe.png', 'nom' => 'Poulet Moambe', 'alt' => 'Poulet Moambe'],
@@ -12,13 +11,11 @@ $recettes = [
     ['img' => 'assets/canard.png', 'nom' => 'Canard laqué', 'alt' => 'Canard laqué']
 ];
 
-// Paramètres de pagination
 $recettes_par_page = 5;
 $page = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;
 $total_recettes = count($recettes);
 $total_pages = ceil($total_recettes / $recettes_par_page);
 
-// Calcul des recettes à afficher
 $debut = ($page - 1) * $recettes_par_page;
 $recettes_a_afficher = array_slice($recettes, $debut, $recettes_par_page);
 ?>
